@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 # encoding: utf-8
 """
 cookie
@@ -12,7 +12,7 @@ import re
 import sqlite3
 
 def usage():
-    print "Usage: cookie URL COOKIE_NAME"
+    print("Usage: cookie URL COOKIE_NAME")
     sys.exit(0)
 
 def debug(*args):
@@ -165,7 +165,7 @@ def main(args):
     for get_cookie in dispatch:
         cookie_val = get_cookie()
         if cookie_val:
-            print cookie_val
+            print(cookie_val)
             return
 
 if __name__ == '__main__':
